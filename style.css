@@ -830,3 +830,26 @@ nav a:hover {
   }
 }
 
+
+/* Fix cursor on touch devices */
+@media (hover: none), (pointer: coarse) {
+  body {
+    cursor: auto !important;
+  }
+  #custom-cursor, #cursor-trail {
+    display: none !important;
+  }
+}
+@media screen and (max-width: 768px) {
+  /* Adjust header height for mobile if needed */
+  header {
+    height: auto; /* or set a fixed height if you want */
+    padding: 15px 20px; /* smaller padding on mobile */
+  }
+
+  /* Push hero down below header on mobile */
+  #hero {
+    padding-top: 100px; /* enough to clear the header */
+    height: auto; /* let it grow naturally */
+  }
+}
