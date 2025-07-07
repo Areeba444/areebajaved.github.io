@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Areeba Javed - Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Floating blobs -->
+  <div id="blob-container">
+    <div class="blob blob1"></div>
+    <div class="blob blob2"></div>
+    <div class="blob blob3"></div>
+  </div>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">AJ</div>
+    <nav>
+      <a href="#hero">Home</a>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="hero">
+    <div class="hero-left">
+      <h1>Hello, I’m Areeba Javed!</h1>
+      <div class="typing" id="typed-text"></div>
+      <div class="tagline">Turning ideas into impact</div>
+      <a href="#projects" class="btn">View Projects</a>
+    </div>
+    <div class="hero-right">
+      <img src="pfp-her.png" alt="Areeba Javed" />
+    </div>
+    <div class="scroll-down" title="Scroll down">&#8595;</div>
+  </section>
+<section id="about">
+  <div class="about-container">
+    <!-- Left side: your existing about text -->
+    <div class="about-left">
+      <h1>About Me</h1>
+      <p>Hi, I’m Areeba Javed, a curious mind with a cheerful spirit and a love for all things tech.</p>
+      <p>As a Computer Science student, I thrive on turning abstract ideas into impactful, user-friendly solutions. Whether it's automating a tedious task, designing intuitive interfaces, or building meaningful digital experiences, I’m all in.</p>
+      <p>I believe technology should empower, connect, and inspire. From exploring new frameworks to collaborating on creative projects, I’m constantly learning and pushing boundaries.</p>
+      <p>Beyond the screen, I enjoy storytelling, design, and meaningful conversations because I believe communication is just as powerful as code.</p>
+      <a href="#projects" class="btn see-work-btn">See My Work</a> 
+    </div>
+
+   <div class="about-right">
+  <div class="edu-column">
+    <div class="edu-step" id="school-step">
+      <img src="school.png" alt="School" />
+      <div>
+        <strong>Bahria Foundation College Wah Campus</strong><br />
+        Matriculation<br />
+        2019 – 2021
+      </div>
+    </div>
+    <div class="edu-step" id="college-step">
+      <img src="clg.png" alt="College" />
+      <div>
+        <strong>KIPS College</strong><br />
+        FSc Pre-Engineering<br />
+        2021 – 2023
+      </div>
+    </div>
+    <div class="edu-step" id="university-step">
+      <img src="uni.png" alt="University" />
+      <div>
+        <strong>FAST NUCES, Islamabad</strong><br />
+        BS Computer Science<br />
+        2023 – Present
+      </div>
+    </div>
+  </div>
+  <!-- Add this dot div here -->
+  <!--<div class="dot" id="animated-dot"></div>-->
+</div>
+
+</section>
+
+<!-- Skills Section -->
+<section id="skills" class="skills-section">
+  <h2>Skills</h2>
+  <div class="skills-grid">
+
+    <div class="skill-card" tabindex="0">
+      <div class="skill-card-inner">
+        <div class="card-front">
+          <span>Programming</span>
+          <div class="hover-hint">Click to reveal</div>
+        </div>
+        <div class="card-back">
+          <ul>
+            <li>C, C++, and C#</li>
+<li>Assembly Language (x86 architecture)</li>
+
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="skill-card" tabindex="0">
+      <div class="skill-card-inner">
+        <div class="card-front">
+          <span>Database</span>
+          <div class="hover-hint">Click to reveal</div>
+        </div>
+        <div class="card-back">
+          <ul>
+         <li>Microsoft SQL Server(SSMS)</li>
+         <li>ADO.NET</li>
+         <li>MongoDB</li>
+
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="skill-card" tabindex="0">
+      <div class="skill-card-inner">
+        <div class="card-front">
+          <span>Web Development</span>
+          <div class="hover-hint">Click to reveal</div>
+        </div>
+        <div class="card-back">
+          <ul>
+            <li>WordPress</li>
+            <li>HTML & CSS</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="skill-card" tabindex="0">
+      <div class="skill-card-inner">
+        <div class="card-front">
+          <span>Automation</span>
+          <div class="hover-hint">Click to reveal</div>
+        </div>
+        <div class="card-back">
+          <ul>
+            <li>n8n</li>
+            <li>Webhooks</li>
+            <li>API Integration</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="skill-card" tabindex="0">
+      <div class="skill-card-inner">
+        <div class="card-front">
+          <span>Soft Skills</span>
+          <div class="hover-hint">Click to reveal</div>
+        </div>
+        <div class="card-back">
+          <ul>
+        <li>Presentation</li>
+  <li>Teamwork</li>
+  <li>Collaboration</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+  <!-- Projects Section -->
+   <section id="projects">
+  <h1 class="section-heading">Projects</h1>
+  <div class="project-grid">
+    <div class="project-card">
+      <h2>Daily Weather Automation</h2>
+      <p>Created an n8n workflow to send daily 8 AM weather updates via Gmail and log rainy days to Google Sheets using webhooks and APIs.</p>
+    </div>
+    <div class="project-card">
+      <h2>TravelEase – Travel Platform</h2>
+      <p>Developed a C# WinForms desktop app with SQL Server backend for booking, role-based access, and cost planning. Built with ADO.NET.</p>
+    </div>
+    <div class="project-card">
+      <h2>GitLite</h2>
+      <p>A version control system for CSV files built using custom data structures in C++. Supports basic Git-like operations: commit, push, pull.</p>
+    </div>
+    <div class="project-card">
+      <h2>Mini Notepad App</h2>
+      <p>A terminal-based text editor in C++ with basic file operations and custom interface using file streams. Aimed at simplicity and speed.</p>
+    </div>
+    <div class="project-card">
+      <h2>AirControlX</h2>
+      <p>Air traffic simulation in C with threading and mutex. Managed runway scheduling, flight priorities, and real-time movement logic.</p>
+    </div>
+    <div class="project-card">
+      <h2>Plants vs. Zombies Clone</h2>
+      <p>Built game mechanics and animations in C++ for a PvZ-inspired game using OOP principles and game loop logic.</p>
+    </div>
+  </div>
+</section>
+  
+
+
+  <!-- Contact Section -->
+ <section id="contact">
+  <h2>Contact Me</h2>  <!-- or Get in Touch -->
+  <div class="contact-bar">
+    <a href="#" class="contact-link">
+      <img src="location.png" alt="Location" />
+      <span>Islamabad</span>
+    </a>
+    <a href="mailto:areebajd495@gmail.com" class="contact-link">
+      <img src="mail.png" alt="Email" />
+      <span>areebajd495@gmail.com</span>
+    </a>
+    <a href="https://linkedin.com/in/areeba-javed-14a9j05" target="_blank" class="contact-link">
+      <img src="linkedin.png" alt="LinkedIn" />
+      <span>LinkedIn</span>
+    </a>
+    <a href="https://github.com/Areeba444" target="_blank" class="contact-link">
+      <img src="github-sign.png" alt="GitHub" />
+      <span>GitHub</span>
+    </a>
+  </div>
+</section>
+
+
+<div id="custom-cursor"></div>
+<div id="cursor-trail"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+
