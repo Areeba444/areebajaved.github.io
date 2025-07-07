@@ -838,17 +838,16 @@ nav a:hover {
   }
 }
 
-
 @media screen and (max-width: 768px) {
   header {
     display: none !important;
   }
 
   #hero {
-    padding-top: 80px !important; /* No need to push it down anymore */
+    padding-top: 0 !important;
+    height: 100svh !important; /* Use small viewport height unit */
   }
 }
-
 
 
 
