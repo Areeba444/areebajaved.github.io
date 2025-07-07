@@ -841,15 +841,16 @@ nav a:hover {
   }
 }
 @media screen and (max-width: 768px) {
-  /* Adjust header height for mobile if needed */
   header {
-    height: auto; /* or set a fixed height if you want */
-    padding: 15px 20px; /* smaller padding on mobile */
+    height: auto;
+    padding: 15px 20px;
   }
 
-  /* Push hero down below header on mobile */
   #hero {
-    padding-top: 100px; /* enough to clear the header */
-    height: auto; /* let it grow naturally */
+    /* padding-top to push content below fixed header */
+    padding-top: 90px;  /* Adjust if your header height + padding is about 90px */
+    height: calc(100vh - 90px); /* Viewport height minus header height */
+    box-sizing: border-box;
   }
 }
+
