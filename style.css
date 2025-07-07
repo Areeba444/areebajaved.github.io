@@ -16,10 +16,18 @@ body {
   overflow-x: hidden;
   position: relative;
   min-height: 100vh;
-   cursor: none;/* Hide default cursor */
+  cursor: none;/* Hide default cursor */
 }
 
-
+/* Fix cursor on touch devices */
+@media  screen and (max-width: 768px), (hover: none), (pointer: coarse) {
+  body {
+    cursor: auto !important;
+  }
+  #custom-cursor, #cursor-trail {
+    display: none !important;
+  }
+}
 
 /* Main cursor ring */
 #custom-cursor {
@@ -831,26 +839,32 @@ nav a:hover {
 }
 
 
-/* Fix cursor on touch devices */
-@media (hover: none), (pointer: coarse) {
-  body {
-    cursor: auto !important;
-  }
-  #custom-cursor, #cursor-trail {
-    display: none !important;
-  }
-}
 @media screen and (max-width: 768px) {
   header {
-    height: auto;
-    padding: 15px 20px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 16px;
+    height: 50px;
+    font-size: 0.9rem;
+  }
+
+  .logo {
+    font-size: 1.3rem;
+    letter-spacing: 2px;
+  }
+
+  nav {
+    display: none; /* Hide nav or toggle menu on mobile if needed */
   }
 
   #hero {
-    /* padding-top to push content below fixed header */
-    padding-top: 90px;  /* Adjust if your header height + padding is about 90px */
-    height: calc(100vh - 90px); /* Viewport height minus header height */
+    padding-top: 60px; /* push hero below header */
+    height: auto;
     box-sizing: border-box;
+    text-align: center;
   }
 }
+
+
 
