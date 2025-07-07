@@ -57,7 +57,11 @@ body {
   box-shadow: 0 0 6px rgba(45, 156, 219, 0.6);
 }
 
-
+@media (hover: none), (pointer: coarse) {
+  body {
+    cursor: auto; /* restore default cursor on touch devices */
+  }
+}
 
 /* Floating Blobs Background */
 #blob-container {
@@ -145,25 +149,48 @@ nav a:hover {
   color: #2D9CDB;
   box-shadow: 0 4px 10px rgba(175, 158, 220, 0.3);
 }
+@media screen and (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    padding: 15px 20px;
+  }
 
-/* Hero */
+  nav {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  nav a {
+    margin: 8px 0;
+    font-size: 1.1rem;
+  }
+}
+
 #hero {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: center; /* Center horizontally */
+  align-items: center;     /* Center vertically */
   padding: 120px 80px 0;
   height: 100vh;
-  gap: 60px;
+  gap: 0; /* No gap needed */
   position: relative;
   z-index: 1;
   opacity: 0;
   animation: fadeIn 2s ease forwards;
+  text-align: center; /* center text inside */
+  flex-direction: column; /* Stack vertically if needed */
 }
+
 .hero-left {
-  max-width: 50%;
+  max-width: 600px; /* Optional max width */
 }
+
 .hero-left h1 {
-  font-size: 3.2rem;
+  font-size: 3.5rem;
   margin-bottom: 10px;
 }
 .typing {
@@ -189,18 +216,6 @@ nav a:hover {
   margin-bottom: 30px;
   font-style: italic;
 }
-.hero-right img {
-  width: 420px;
-  max-width: 100%;
-  transform: translateX(-40px);
-  border-radius: 16px;
-  box-shadow: 0 10px 24px rgba(175, 158, 220, 0.3);
-  transition: transform 0.3s ease;
-}
-.hero-right img:hover {
-  transform: scale(1.05) translateX(-40px);
-}
-
 /* Button */
 .btn {
   background-color: #2D9CDB;
@@ -593,6 +608,20 @@ nav a:hover {
   transition: all 1s ease;
 }
 
+@media screen and (max-width: 768px) {
+  #projects {
+    padding: 40px 20px;
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .project-card {
+    padding: 20px;
+  }
+}
 
 /* Skills Section */
 
