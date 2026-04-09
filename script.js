@@ -1,118 +1,115 @@
-// Typing effect
-  // Typing effect using plain JavaScript
-    const textArray = [
-      "Computer Science Student",
-      "Aspiring Developer",
-      "Automation Enthusiast"
-    ];
-    let index = 0;
-    let charIndex = 0;
-    let currentText = "";
-    let isDeleting = false;
+// ============================================
+// AREEBA JAVED PORTFOLIO — JS 2025
+// ============================================
 
-    const typedText = document.getElementById("typed-text");
+// ===== HEADER SCROLL EFFECT =====
+const header = document.getElementById('header');
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 40) {
+    header.classList.add('scrolled');
+  } else {
+    header.classList.remove('scrolled');
+  }
+});
 
-    function type() {
-      if (index >= textArray.length) index = 0;
-      currentText = textArray[index];
+// ===== HAMBURGER MENU =====
+const hamburger = document.getElementById('hamburger');
+const mobileNav = document.getElementById('mobile-nav');
 
-      if (!isDeleting) {
-        typedText.textContent = currentText.substring(0, charIndex++);
-        if (charIndex > currentText.length + 10) isDeleting = true;
-      } else {
-        typedText.textContent = currentText.substring(0, charIndex--);
-        if (charIndex < 0) {
-          isDeleting = false;
-          index++;
+hamburger.addEventListener('click', () => {
+  mobileNav.classList.toggle('open');
+  const spans = hamburger.querySelectorAll('span');
+  if (mobileNav.classList.contains('open')) {
+    spans[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
+    spans[1].style.opacity = '0';
+    spans[2].style.transform = 'rotate(-45deg) translate(5px, -5px)';
+  } else {
+    spans[0].style.transform = '';
+    spans[1].style.opacity = '';
+    spans[2].style.transform = '';
+  }
+});
+
+// Close mobile nav when a link is clicked
+document.querySelectorAll('.mob-link').forEach(link => {
+  link.addEventListener('click', () => {
+    mobileNav.classList.remove('open');
+    const spans = hamburger.querySelectorAll('span');
+    spans[0].style.transform = '';
+    spans[1].style.opacity = '';
+    spans[2].style.transform = '';
+  });
+});
+
+// ===== TYPING EFFECT =====
+const roles = [
+  "Full Stack Developer",
+  "Automation Builder",
+  "CS Student @ FAST",
+  "Social Work Minor",
+  "Problem Solver"
+];
+let roleIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
+const typedEl = document.getElementById('typed-text');
+
+function typeEffect() {
+  if (!typedEl) return;
+  const current = roles[roleIndex];
+  if (!isDeleting) {
+    typedEl.textContent = current.substring(0, charIndex++);
+    if (charIndex > current.length + 8) isDeleting = true;
+  } else {
+    typedEl.textContent = current.substring(0, charIndex--);
+    if (charIndex < 0) {
+      isDeleting = false;
+      roleIndex = (roleIndex + 1) % roles.length;
+    }
+  }
+  setTimeout(typeEffect, isDeleting ? 40 : 120);
+}
+window.addEventListener('load', typeEffect);
+
+// ===== PROJECT CARD SCROLL REVEAL =====
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry, i) => {
+    if (entry.isIntersecting) {
+      setTimeout(() => {
+        entry.target.classList.add('visible');
+      }, i * 80);
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.12 });
+
+document.querySelectorAll('.project-card').forEach(card => observer.observe(card));
+
+// ===== SMOOTH SCROLL HINT =====
+const scrollHint = document.querySelector('.scroll-hint');
+if (scrollHint) {
+  scrollHint.addEventListener('click', () => {
+    document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' });
+  });
+}
+
+// ===== ACTIVE NAV HIGHLIGHT =====
+const sections = document.querySelectorAll('section[id]');
+const navLinks = document.querySelectorAll('nav a:not(.nav-resume-btn)');
+
+const sectionObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      navLinks.forEach(link => {
+        link.style.background = '';
+        link.style.color = '';
+        if (link.getAttribute('href') === `#${entry.target.id}`) {
+          link.style.background = 'var(--blush-100)';
+          link.style.color = 'var(--ink)';
         }
-      }
-      setTimeout(type, isDeleting ? 50 : 150);
-    }
-
-    window.addEventListener("load", type);
-// Fade in about section on scroll
-function fadeInOnScroll() {
-  const about = document.querySelector('#about .about-container');
-  if (!about) return;
-  const rect = about.getBoundingClientRect();
-  if(rect.top < window.innerHeight - 100) {
-    about.classList.add('visible');
-  }
-}
-window.addEventListener('scroll', fadeInOnScroll);
-window.addEventListener('load', fadeInOnScroll);
-
-// Smooth scroll for "See My Work"
-document.querySelector('.see-work-btn').addEventListener('click', e => {
-  e.preventDefault();
-  const projects = document.querySelector('#projects');
-  if(projects) projects.scrollIntoView({behavior: 'smooth'});
-});
-
-// Scroll arrow click
-document.querySelector('.scroll-down').addEventListener('click', () => {
-  const aboutSection = document.getElementById('about');
-  if (aboutSection) {
-    aboutSection.scrollIntoView({ behavior: 'smooth' });
-  }
-});
-// Intersection Observer for project cards and contact heading
-// This will reveal project cards and the contact heading when they come into view
-document.addEventListener("DOMContentLoaded", () => {
-  const observerOptions = { threshold: 0.3 };
-
-  const revealOnScroll = (entries, observer) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("fade-in");
-        observer.unobserve(entry.target);
-      }
-    });
-  };
-
-  const observer = new IntersectionObserver(revealOnScroll, observerOptions);
-
-  document.querySelectorAll(".project-card").forEach(card => observer.observe(card));
-  const contactHeading = document.querySelector(".animated-heading");
-  if (contactHeading) observer.observe(contactHeading);
-});
-
-
-
-const cursor = document.getElementById('custom-cursor');
-const trail = document.getElementById('cursor-trail');
-
-let mouseX = 0, mouseY = 0;
-let trailX = 0, trailY = 0;
-
-window.addEventListener('mousemove', e => {
-  mouseX = e.clientX;
-  mouseY = e.clientY;
-  
-  cursor.style.left = mouseX + 'px';
-  cursor.style.top = mouseY + 'px';
-});
-
-// Smooth trail following
-function animateTrail() {
-  trailX += (mouseX - trailX) * 0.15;
-  trailY += (mouseY - trailY) * 0.15;
-  trail.style.left = trailX + 'px';
-  trail.style.top = trailY + 'px';
-  requestAnimationFrame(animateTrail);
-}
-animateTrail();
-
-document.querySelectorAll('.skill-card').forEach(card => {
-  card.addEventListener('click', () => {
-    card.classList.toggle('flipped');
-  });
-  // Optional: flip on keyboard "Enter" for accessibility
-  card.addEventListener('keydown', e => {
-    if (e.key === 'Enter' || e.key === ' ') {
-      e.preventDefault();
-      card.classList.toggle('flipped');
+      });
     }
   });
-});
+}, { threshold: 0.4 });
 
+sections.forEach(s => sectionObserver.observe(s));

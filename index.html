@@ -3,257 +3,333 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Areeba Javed - Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <title>Areeba Javed — Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&family=Caveat:wght@600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- Floating blobs -->
-  <div id="blob-container">
-    <div class="blob blob1"></div>
-    <div class="blob blob2"></div>
-    <div class="blob blob3"></div>
+ 
+
+  <!-- Ambient background -->
+  <div class="ambient">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+    <div class="orb orb-4"></div>
   </div>
 
   <!-- Header -->
-  <header>
-    <div class="logo">AJ</div>
+  <header id="header">
+    <div class="logo">
+      <span class="logo-initials">AJ</span>
+      <span class="logo-dot">·</span>
+    </div>
     <nav>
-      <a href="#hero">Home</a>
       <a href="#about">About</a>
+      <a href="#skills">Skills</a>
       <a href="#projects">Projects</a>
       <a href="#contact">Contact</a>
+      <a href="https://drive.google.com/file/d/1SZHC9Vgxg6IluoMd898R8U-cA4pUFjsD/view?usp=sharing" target="_blank" class="nav-resume-btn">Resume ↗</a>
     </nav>
+    <button class="hamburger" id="hamburger" aria-label="menu">
+      <span></span><span></span><span></span>
+    </button>
   </header>
 
-  <!-- Hero Section -->
+  <!-- Mobile Nav -->
+  <div class="mobile-nav" id="mobile-nav">
+    <a href="#about" class="mob-link">About</a>
+    <a href="#skills" class="mob-link">Skills</a>
+    <a href="#projects" class="mob-link">Projects</a>
+    <a href="#contact" class="mob-link">Contact</a>
+    <a href="https://drive.google.com/file/d/1SZHC9Vgxg6IluoMd898R8U-cA4pUFjsD/view?usp=sharing" target="_blank" class="mob-link mob-resume">Resume ↗</a>
+  </div>
+
+  <!-- ===== HERO ===== -->
   <section id="hero">
-    <div class="hero-left">
-      <h1>Hello, I’m Areeba Javed!</h1>
-      <div class="typing" id="typed-text"></div>
-      <div class="tagline">Turning ideas into impact</div>
-      <a href="#projects" class="btn">View Projects</a>
+    <div class="hero-content">
+      <p class="hero-eyebrow reveal">Hello, I'm</p>
+      <h1 class="hero-name reveal-delay-1">Areeba<br><em>Javed.</em></h1>
+      <div class="hero-tags reveal-delay-2">
+        <span class="tag">Full Stack Dev</span>
+        <span class="tag">CS @ FAST NUCES</span>
+        <span class="tag">Automation</span>
+        <span class="tag">Islamabad, PK</span>
+      </div>
+      <p class="hero-sub reveal-delay-3">
+        Turning ideas into impact — one line of code at a time.
+      </p>
+      <div class="hero-actions reveal-delay-4">
+        <a href="#projects" class="btn-primary">See My Work</a>
+        <a href="https://drive.google.com/file/d/1SZHC9Vgxg6IluoMd898R8U-cA4pUFjsD/view?usp=sharing" target="_blank" class="btn-secondary">View Resume ↗</a>
+      </div>
     </div>
 
-    <div class="scroll-down" title="Scroll down">&#8595;</div>
+    <div class="hero-visual reveal-delay-2">
+      <div class="hero-card">
+        <div class="hc-top">
+          <div class="hc-avatar">AJ</div>
+          <div class="hc-badge">Open to opportunities</div>
+        </div>
+        <div class="hc-typing">
+          <span id="typed-text"></span><span class="cursor-blink">|</span>
+        </div>
+        <div class="hc-stats">
+          <div class="stat"><strong>10+</strong><span>Projects</span></div>
+          <div class="stat"><strong>2</strong><span>Internships</span></div>
+          <div class="stat"><strong>6th</strong><span>Semester</span></div>
+        </div>
+      </div>
+      <div class="floating-pill pill-1">React & Node.js</div>
+      <div class="floating-pill pill-2">n8n Automation</div>
+      <div class="floating-pill pill-3">C++ / C#</div>
+    </div>
+    <div class="scroll-hint">scroll ↓</div>
   </section>
-<section id="about">
-  <div class="about-container">
-    <!-- Left side: your existing about text -->
-    <div class="about-left">
-      <h1>About Me</h1>
-      <p>Hi, I’m Areeba Javed, a curious mind with a cheerful spirit and a love for all things tech.</p>
-      <p>As a Computer Science student, I thrive on turning abstract ideas into impactful, user-friendly solutions. Whether it's automating a tedious task, designing intuitive interfaces, or building meaningful digital experiences, I’m all in.</p>
-      <p>I believe technology should empower, connect, and inspire. From exploring new frameworks to collaborating on creative projects, I’m constantly learning and pushing boundaries.</p>
-      <p>Beyond the screen, I enjoy storytelling, design, and meaningful conversations because I believe communication is just as powerful as code.</p>
-      <a href="#projects" class="btn see-work-btn">See My Work</a> 
-    </div>
 
-   <div class="about-right">
-  <div class="edu-column">
-    <div class="edu-step" id="school-step">
-      <img src="school.png" alt="School" />
-      <div>
-        <strong>Bahria Foundation College Wah Campus</strong><br />
-        Matriculation<br />
-        2019 – 2021
+  <!-- ===== ABOUT ===== -->
+  <section id="about">
+    <div class="section-label">01 · About</div>
+    <div class="about-grid">
+      <div class="about-text">
+        <h2 class="section-title">A curious mind<br><em>with a cheerful spirit.</em></h2>
+        <p>I'm a Computer Science student at FAST NUCES, Islamabad — passionate about building technology that actually solves real problems for real people.</p>
+        <p>Whether I'm building full-stack apps, designing automation workflows with n8n, or experimenting with AI integrations, I bring the same energy: intentional, driven, and genuinely excited about what I'm making.</p>
+        <p>Beyond the screen, I'm a storyteller and a people-person — I believe good communication is just as powerful as good code.</p>
+        <a href="#contact" class="btn-outline">Let's Connect →</a>
       </div>
-    </div>
-    <div class="edu-step" id="college-step">
-      <img src="clg.png" alt="College" />
-      <div>
-        <strong>KIPS College</strong><br />
-        FSc Pre-Engineering<br />
-        2021 – 2023
-      </div>
-    </div>
-    <div class="edu-step" id="university-step">
-      <img src="uni.png" alt="University" />
-      <div>
-        <strong>FAST NUCES, Islamabad</strong><br />
-        BS Computer Science<br />
-        2023 – Present
-      </div>
-    </div>
-  </div>
-  <!-- Add this dot div here -->
-  <!--<div class="dot" id="animated-dot"></div>-->
-</div>
 
-</section>
-
-<!-- Skills Section -->
-<section id="skills" class="skills-section">
-  <h2>Skills</h2>
-  <div class="skills-grid">
-
-    <div class="skill-card" tabindex="0">
-      <div class="skill-card-inner">
-        <div class="card-front">
-          <span>Programming</span>
-          <div class="hover-hint">Click to reveal</div>
+      <div class="about-right">
+        <div class="edu-timeline">
+          <h3 class="timeline-label">Education</h3>
+          <div class="edu-item current">
+            <div class="edu-dot"></div>
+            <div class="edu-info">
+              <strong>FAST NUCES, Islamabad</strong>
+              <span>BS Computer Science · 2023 – Present</span>
+              <em>6th Semester</em>
+            </div>
+          </div>
+          <div class="edu-item">
+            <div class="edu-dot"></div>
+            <div class="edu-info">
+              <strong>KIPS College</strong>
+              <span>FSc Pre-Engineering · 2021 – 2023</span>
+            </div>
+          </div>
+          <div class="edu-item">
+            <div class="edu-dot"></div>
+            <div class="edu-info">
+              <strong>Bahria Foundation College</strong>
+              <span>Matriculation · 2019 – 2021</span>
+            </div>
+          </div>
         </div>
-        <div class="card-back">
-          <ul>
-            <li>C, C++, and C#</li>
-<li>Assembly Language (x86 architecture)</li>
 
-          </ul>
+        <div class="experience-card">
+          <h3 class="timeline-label">Experience</h3>
+          <div class="exp-item">
+            <div class="exp-role">Software Engineer Intern</div>
+            <div class="exp-company">Grepco · Part-time Remote</div>
+          </div>
+          <div class="exp-item">
+            <div class="exp-role">Automation Intern</div>
+            <div class="exp-company">Coding The Brains · Jun–Aug 2025</div>
+          </div>
         </div>
       </div>
     </div>
+  </section>
 
-    <div class="skill-card" tabindex="0">
-      <div class="skill-card-inner">
-        <div class="card-front">
-          <span>Database</span>
-          <div class="hover-hint">Click to reveal</div>
+  <!-- ===== SKILLS ===== -->
+  <section id="skills">
+    <div class="section-label">02 · Skills</div>
+    <h2 class="section-title">What I work with.</h2>
+    <div class="skills-cluster">
+      <div class="skill-group">
+        <div class="sg-title">Languages</div>
+        <div class="sg-tags">
+          <span>C</span><span>C++</span><span>C#</span>
+          <span>Python</span><span>Java</span>
+          <span>JavaScript</span><span>Assembly (x86)</span>
         </div>
-        <div class="card-back">
-          <ul>
-         <li>Microsoft SQL Server(SSMS)</li>
-         <li>ADO.NET</li>
-         <li>MongoDB</li>
-
-          </ul>
+      </div>
+      <div class="skill-group">
+        <div class="sg-title">Frontend</div>
+        <div class="sg-tags">
+          <span>React</span><span>React Native</span>
+          <span>Figma</span><span>Tailwind</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <div class="sg-title">Backend & DB</div>
+        <div class="sg-tags">
+          <span>Node.js</span><span>Supabase</span>
+          <span>SQL Server</span><span>MongoDB</span>
+          <span>ADO.NET</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <div class="sg-title">Automation & Tools</div>
+        <div class="sg-tags">
+          <span>n8n</span><span>Webhooks</span>
+          <span>API Integration</span><span>OpenAI API</span>
+          <span>Git</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <div class="sg-title">Soft Skills</div>
+        <div class="sg-tags">
+          <span>Public Speaking</span><span>Teamwork</span>
+          <span>Storytelling</span><span>Community Work</span>
         </div>
       </div>
     </div>
+  </section>
 
-    <div class="skill-card" tabindex="0">
-      <div class="skill-card-inner">
-        <div class="card-front">
-          <span>Web Development</span>
-          <div class="hover-hint">Click to reveal</div>
+  <!-- ===== PROJECTS ===== -->
+  <section id="projects">
+    <div class="section-label">03 · Projects</div>
+    <h2 class="section-title">Things I've built.</h2>
+
+    <div class="projects-grid">
+
+      <!-- Featured row -->
+      <div class="project-card featured" data-tag="Full Stack · In Progress">
+        <div class="pc-header">
+          <span class="pc-status live">🔧 In Progress</span>
         </div>
-        <div class="card-back">
-          <ul>
-            <li>WordPress</li>
-            <li>HTML & CSS</li>
-          </ul>
-        </div>
+        <h3>Control Shed Management System</h3>
+        <p>A full-stack management platform for control shed operations. Built with React and Node.js with a structured backend — focused on real-world utility and clean data workflows.</p>
+        <div class="pc-stack"><span>React</span><span>Node.js</span><span>Full Stack</span></div>
       </div>
-    </div>
 
-    <div class="skill-card" tabindex="0">
-      <div class="skill-card-inner">
-        <div class="card-front">
-          <span>Automation</span>
-          <div class="hover-hint">Click to reveal</div>
+      <div class="project-card featured" data-tag="Full Stack · Completed">
+        <div class="pc-header">
+          <span class="pc-status done">✅ Completed</span>
         </div>
-        <div class="card-back">
-          <ul>
-            <li>n8n</li>
-            <li>Webhooks</li>
-            <li>API Integration</li>
-          </ul>
-        </div>
+        <h3>LPG Management System</h3>
+        <p>A complete full-stack LPG delivery and management system with role-based access, built using React, Node.js (Maven), and Supabase. Handles real-world operational workflows.</p>
+        <div class="pc-stack"><span>React</span><span>Node.js</span><span>Supabase</span></div>
       </div>
-    </div>
 
-    <div class="skill-card" tabindex="0">
-      <div class="skill-card-inner">
-        <div class="card-front">
-          <span>Soft Skills</span>
-          <div class="hover-hint">Click to reveal</div>
+      <div class="project-card" data-tag="AI · Full Stack">
+        <div class="pc-header">
+          <span class="pc-status done">✅ Completed</span>
         </div>
-        <div class="card-back">
-          <ul>
-        <li>Presentation</li>
-  <li>Teamwork</li>
-  <li>Collaboration</li>
-          </ul>
-        </div>
+        <h3>Email Genie</h3>
+        <p>LLM-powered app that generates professional emails based on tone and purpose. Built with React and Node.js, deployed live and used during internship interviews.</p>
+        <div class="pc-stack"><span>React</span><span>Node.js</span><span>OpenAI API</span></div>
+        <a href="https://github.com/Areeba444" class="pc-link">View on GitHub →</a>
       </div>
+
+      <div class="project-card" data-tag="Systems · OS">
+        <div class="pc-header">
+          <span class="pc-status done">✅ Completed</span>
+        </div>
+        <h3>AirControlX</h3>
+        <p>Real-time air traffic control simulation in C/C++ with threading, mutex synchronization, runway scheduling, and flight priority handling — a full OS-level project.</p>
+        <div class="pc-stack"><span>C/C++</span><span>Threading</span><span>OS Concepts</span></div>
+      </div>
+
+      <div class="project-card" data-tag="Desktop · Full Stack">
+        <div class="pc-header">
+          <span class="pc-status done">✅ Completed</span>
+        </div>
+        <h3>TravelEase</h3>
+        <p>C# WinForms desktop travel booking app with SQL Server backend, role-based access, cost planning, and ADO.NET data integration.</p>
+        <div class="pc-stack"><span>C#</span><span>WinForms</span><span>SQL Server</span><span>ADO.NET</span></div>
+      </div>
+
+      <div class="project-card" data-tag="DSA · C++">
+        <div class="pc-header">
+          <span class="pc-status done">✅ Completed</span>
+        </div>
+        <h3>GitLite</h3>
+        <p>A custom version-control system for CSV files built in C++ using hand-rolled data structures. Supports commit, push, and pull operations — a DSA course project.</p>
+        <div class="pc-stack"><span>C++</span><span>Data Structures</span><span>File I/O</span></div>
+      </div>
+
+      <div class="project-card" data-tag="Automation">
+        <div class="pc-header">
+          <span class="pc-status done">✅ Completed</span>
+        </div>
+        <h3>Smart Event Assistant</h3>
+        <p>Google Sheets webhook-triggered n8n automation that creates Calendar events, sends scheduled email reminders, and manages the full event lifecycle automatically.</p>
+        <div class="pc-stack"><span>n8n</span><span>Google Sheets</span><span>Gmail</span></div>
+      </div>
+
+      <div class="project-card" data-tag="C++ · OOP">
+        <div class="pc-header">
+          <span class="pc-status done">✅ Completed</span>
+        </div>
+        <h3>Plants vs. Zombies Clone</h3>
+        <p>A faithful PvZ clone built in C++ using OOP principles, game loop logic, sprite animation, and lane-based mechanics.</p>
+        <div class="pc-stack"><span>C++</span><span>OOP</span><span>Game Dev</span></div>
+      </div>
+
+      <div class="project-card" data-tag="C++ · DSA">
+        <div class="pc-header">
+          <span class="pc-status done">✅ Completed</span>
+        </div>
+        <h3>Mini Notepad App</h3>
+        <p>A terminal-based text editor in C++ with file operations, custom interface using streams, and a GUI version — completed as a two-phase DSA project.</p>
+        <div class="pc-stack"><span>C++</span><span>File Streams</span><span>DSA</span></div>
+      </div>
+
+      <div class="project-card" data-tag="Automation">
+        <div class="pc-header">
+          <span class="pc-status done">✅ Completed</span>
+        </div>
+        <h3>Daily Weather Automation</h3>
+        <p>n8n workflow delivering 8 AM weather updates via Gmail and logging rainy days to Google Sheets through webhooks and weather APIs.</p>
+        <div class="pc-stack"><span>n8n</span><span>Gmail API</span><span>Webhooks</span></div>
+      </div>
+
     </div>
+  </section>
 
-  </div>
-</section>
+  <!-- ===== CONTACT ===== -->
+  <section id="contact">
+    <div class="section-label">04 · Contact</div>
+    <div class="contact-inner">
+      <h2 class="section-title">Let's make something<br><em>together.</em></h2>
+      <p class="contact-sub">I'm always open to new opportunities, collaborations, or just a good conversation about tech and ideas.</p>
 
+      <div class="contact-links">
+        <a href="mailto:areebajd495@gmail.com" class="contact-pill">
+          <span class="cp-icon">✉</span>
+          areebajd495@gmail.com
+        </a>
+        <a href="https://linkedin.com/in/areeba-javed-14a9j05" target="_blank" class="contact-pill">
+          <span class="cp-icon">in</span>
+          LinkedIn
+        </a>
+        <a href="https://github.com/Areeba444" target="_blank" class="contact-pill">
+          <span class="cp-icon">⌥</span>
+          GitHub
+        </a>
+        <a href="#" class="contact-pill location-pill">
+          <span class="cp-icon">◉</span>
+          Islamabad, PK
+        </a>
+      </div>
 
-
-  <!-- Projects Section -->
-   <section id="projects">
-  <h1 class="section-heading">Projects</h1>
-  <div class="project-grid">
-<div class="project-card">
-  <h2>Email Genie – AI Email Generator</h2>
-  <p>Built in under 2 hours to practice fast MVP execution, this tool generates emails using OpenAI based on tone and purpose. Made with React and Node.js, I’m currently polishing the UI and adding features like custom length and smarter tone detection.</p>
-</div>
-
- <div class="project-card">
-      <h2>LPG Delivery Android App</h2>
-      <p>Currently building a mobile LPG delivery app using React Native with custom UI and real-world form validation. Focused on Android layout styling and user experience.</p>
+      <a href="https://drive.google.com/file/d/1SZHC9Vgxg6IluoMd898R8U-cA4pUFjsD/view?usp=sharing" target="_blank" class="resume-cta">
+        Download Resume PDF ↓
+      </a>
     </div>
+  </section>
 
-    <div class="project-card">
-      <h2>MindVault – AI Thought Organizer</h2>
-      <p>Currently designing an AI-powered desktop app that organizes, summarizes, and reflects on user notes and ideas using LLMs. Focused on building a personal “second brain.”</p>
-    </div>
-    <div class="project-card">
-      <h2>Smart Event Assistant – n8n Workflow</h2>
-      <p>Implemented a trigger-based automation using Google Sheets webhook to dynamically create Google Calendar events. Utilized time-based nodes and conditional logic to send scheduled email reminders, ensuring end-to-end event lifecycle automation.</p>
-    </div>
-    <div class="project-card">
-      <h2>Daily Weather Automation</h2>
-      <p>Created an n8n workflow to send daily 8 AM weather updates via Gmail and log rainy days to Google Sheets using webhooks and APIs.</p>
-    </div>
-    
-    <div class="project-card">
-      <h2>TravelEase – Travel Platform</h2>
-      <p>Developed a C# WinForms desktop app with SQL Server backend for booking, role-based access, and cost planning. Built with ADO.NET.</p>
-    </div>
-    <div class="project-card">
-      <h2>GitLite</h2>
-      <p>A version control system for CSV files built using custom data structures in C++. Supports basic Git-like operations: commit, push, pull.</p>
-    </div>
-    <div class="project-card">
-      <h2>Mini Notepad App</h2>
-      <p>A terminal-based text editor in C++ with basic file operations and custom interface using file streams. Aimed at simplicity and speed.</p>
-    </div>
-    <div class="project-card">
-      <h2>AirControlX</h2>
-      <p>Air traffic simulation in C with threading and mutex. Managed runway scheduling, flight priorities, and real-time movement logic.</p>
-    </div>
-    <div class="project-card">
-      <h2>Plants vs. Zombies Clone</h2>
-      <p>Built game mechanics and animations in C++ for a PvZ-inspired game using OOP principles and game loop logic.</p>
-    </div>
-  </div>
-</section>
-  
+  <footer>
+    <span>Areeba Javed · 2026</span>
+    <span>Designed & built by me</span>
+  </footer>
 
-
-  <!-- Contact Section -->
- <section id="contact">
-  <h2>Contact Me</h2>  <!-- or Get in Touch -->
-  <div class="contact-bar">
-    <a href="#" class="contact-link">
-      <img src="location.png" alt="Location" />
-      <span>Islamabad</span>
-    </a>
-    <a href="mailto:areebajd495@gmail.com" class="contact-link">
-      <img src="mail.png" alt="Email" />
-      <span>areebajd495@gmail.com</span>
-    </a>
-    <a href="https://linkedin.com/in/areeba-javed-14a9j05" target="_blank" class="contact-link">
-      <img src="linkedin.png" alt="LinkedIn" />
-      <span>LinkedIn</span>
-    </a>
-    <a href="https://github.com/Areeba444" target="_blank" class="contact-link">
-      <img src="github-sign.png" alt="GitHub" />
-      <span>GitHub</span>
-    </a>
-  </div>
-</section>
-
-
-<div id="custom-cursor"></div>
-<div id="cursor-trail"></div>
-
+  <div id="cursor-dot"></div>
   <script src="script.js"></script>
 </body>
 </html>
-
-
