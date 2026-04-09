@@ -2,7 +2,7 @@
 
 Personal portfolio website — designed and built from scratch.
 
-🌐 **Live:** [areebajaved.github.io](https://areebajaved.github.io)
+🌐 **Live:** [areebajaved.github.io](https://areeba444.github.io/areebajaved.github.io/)
 
 ---
 
