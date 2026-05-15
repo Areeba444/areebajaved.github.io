@@ -32,7 +32,7 @@
       <a href="#skills">Skills</a>
       <a href="#projects">Projects</a>
       <a href="#contact">Contact</a>
-      <a href="https://drive.google.com/file/d/1SZHC9Vgxg6IluoMd898R8U-cA4pUFjsD/view?usp=sharing" target="_blank" class="nav-resume-btn">Resume ↗</a>
+      <a href="https://drive.google.com/file/d/1zVY9LBk9SZ_w2bG5spufkQ5lp_YfIxpg/view?usp=sharing" target="_blank" class="nav-resume-btn">Resume ↗</a>
     </nav>
     <button class="hamburger" id="hamburger" aria-label="menu">
       <span></span><span></span><span></span>
@@ -198,16 +198,45 @@
     <div class="projects-grid">
 
       <!-- Featured row -->
-      <div class="project-card featured" data-tag="Full Stack · In Progress">
-        <div class="pc-header">
-          <span class="pc-status live">🔧 In Progress</span>
-        </div>
-        <h3>Control Shed Management System</h3>
-        <p>A full-stack management platform for control shed operations. Built with React and Node.js with a structured backend — focused on real-world utility and clean data workflows.</p>
-        <div class="pc-stack"><span>React</span><span>Node.js</span><span>Full Stack</span></div>
-      </div>
+      <!-- Quiz Generation System -->
+<div class="project-card featured" data-tag="AI · ML">
+  <div class="pc-header">
+    <span class="pc-status done">✅ Completed</span>
+  </div>
+  <h3>Quiz Generation System</h3>
+  <p>Dual-pipeline classical ML system on the RACE dataset achieving 73.72% Exact Match using Random Forest with TF-IDF, cosine similarity, and Word2Vec — matching BERT-level baselines with zero GPU infrastructure.</p>
+  <div class="pc-stack"><span>Python</span><span>scikit-learn</span><span>TF-IDF</span><span>Word2Vec</span><span>NLP</span></div>
+</div>
+<div class="project-card featured" data-tag="Full Stack · Completed">
+  <div class="pc-header">
+    <span class="pc-status done">✅ Completed</span>
+  </div>
+  <h3>Control Shed Management System</h3>
+  <p>Farm management web app with RBAC, real-time financial reporting, dashboard analytics, and a full audit log. Transforms raw poultry-farm operational data into actionable decision support.</p>
+  <div class="pc-stack"><span>React</span><span>Node.js</span><span>Full Stack</span><span>RBAC</span></div>
+</div>
 
-      <div class="project-card featured" data-tag="Full Stack · Completed">
+<!-- CampusConnect -->
+<div class="project-card featured" data-tag="Full Stack · Completed">
+  <div class="pc-header">
+    <span class="pc-status done">✅ Completed</span>
+  </div>
+  <h3>CampusConnect</h3>
+  <p>Full-stack MERN internship and job portal with JWT auth, role-based dashboards for students, recruiters, and admins, debounced search, lazy loading, and rate limiting — production-grade architecture throughout.</p>
+  <div class="pc-stack"><span>MongoDB</span><span>Express</span><span>React</span><span>Node.js</span><span>JWT</span></div>
+</div>
+
+
+<!-- Parallel FFT -->
+<div class="project-card" data-tag="Systems · HPC">
+  <div class="pc-header">
+    <span class="pc-status done">✅ Completed</span>
+  </div>
+  <h3>Parallel FFT Big Integer Multiplier</h3>
+  <p>FFT-based big integer multiplier with OpenMP parallelism, AVX2 SIMD vectorization, and cache-blocked tiled transpose. Benchmarked across input sizes N = 2¹⁶ to 2²⁴ with detailed performance analysis.</p>
+  <div class="pc-stack"><span>C++</span><span>OpenMP</span><span>AVX2 SIMD</span><span>HPC</span></div>
+</div>
+            <div class="project-card" data-tag="Full Stack · Completed">
         <div class="pc-header">
           <span class="pc-status done">✅ Completed</span>
         </div>
@@ -216,7 +245,6 @@
         <div class="pc-stack"><span>React</span><span>Node.js</span><span>Supabase</span></div>
         <a href="https://github.com/AdeenaZaib/LPG360" class="pc-link">View on GitHub →</a>
       </div>
-
       <div class="project-card" data-tag="AI · Full Stack">
         <div class="pc-header">
           <span class="pc-status done">✅ Completed</span>
