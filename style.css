@@ -608,3 +608,11 @@ footer {
   transition: background 0.2s, opacity 0.2s;
 }
 .pc-link-primary:hover { background: var(--accent-dark); opacity: 1; }
+
+/* ===== BADGE VARIANTS ===== */
+.pc-status.wip        { background: #FEF3C7; color: #92400E; }
+.pc-status.tag-fullstack { background: #DBEAFE; color: #1E40AF; }
+.pc-status.tag-ml     { background: #D1FAE5; color: #065F46; }
+.pc-status.tag-ai     { background: #EDE9FE; color: #5B21B6; }
+.pc-status.tag-systems{ background: #F3F4F6; color: #374151; }
+.pc-status.tag-automation { background: #FEE2E2; color: #991B1B; }
