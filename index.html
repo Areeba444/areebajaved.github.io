@@ -208,13 +208,7 @@
           <span class="pc-status live">🟢 Live</span>
         </div>
         <h3>GigBid — Multi-Agent Freelancer Copilot</h3>
-        <p>Autonomous 9-node LangGraph copilot that evaluates freelance jobs, writes evidence-grounded proposals, and waits for human approval before sending. Features hybrid RAG, NLI claim verification, MCP servers, and prompt-injection defense — all benchmarked.</p>
-        <ul class="pc-metrics">
-          <li>⚡ p95 latency: 6.8s → 3.9s (parallel agent barrier)</li>
-          <li>📈 Simulated reply rate: 41% → 65% (A/B test, n=200, p&lt;0.001)</li>
-          <li>🛡 10/10 adversarial injections quarantined</li>
-          <li>✅ Hallucinated claims: 0.42 → 0.04 per proposal</li>
-        </ul>
+        <p>9-node LangGraph agent that evaluates freelance jobs, writes evidence-grounded proposals with hybrid RAG and NLI claim verification, and waits for human approval before sending. Benchmarked against single-agent and supervisor baselines.</p>
         <div class="pc-stack"><span>LangGraph</span><span>MCP</span><span>FastAPI</span><span>Groq</span><span>Hybrid RAG</span><span>NLI</span><span>Render</span></div>
         <div class="pc-links">
           <a href="https://gigbid-rx4j.onrender.com" target="_blank" class="pc-link pc-link-primary">Live Demo ↗</a>
@@ -229,13 +223,7 @@
           <span class="pc-status research">📄 Research-Based</span>
         </div>
         <h3>TrajectoryCoach — Metacognitive Tutor Agent</h3>
-        <p>Autonomous programming tutor that watches IDE activity events (never source code) and decides whether to ask a metacognitive question or stay silent. Built on a timing gate, evidence floor/validator, and gated transfer study — grounded in Phung et al., AIED 2025.</p>
-        <ul class="pc-metrics">
-          <li>🎓 Based on: <em>Plan More, Debug Less</em>, AIED 2025</li>
-          <li>🧪 Validated with 30-item inter-rater reliability study</li>
-          <li>✅ 57 unit tests · fully offline reproducible</li>
-          <li>👥 Group of 2 · Final project, Agentic AI course</li>
-        </ul>
+        <p>Autonomous programming tutor that watches IDE activity events (never source code) and decides whether to deliver a metacognitive scaffold or stay silent. Built on timing gates, evidence floor validation, and a transfer study — grounded in Phung et al., AIED 2025.</p>
         <div class="pc-stack"><span>Python</span><span>LangGraph</span><span>Agentic Policy</span><span>Evidence Validation</span></div>
         <div class="pc-links">
           <a href="https://github.com/Areeba444/TrajectoryCoach" target="_blank" class="pc-link">GitHub →</a>
@@ -248,12 +236,7 @@
           <span class="pc-status done">🤖 Agentic AI</span>
         </div>
         <h3>Travel Itinerary Agent — Sandboxed Booking Agent</h3>
-        <p>Autonomous travel assistant with a bounded 6-step ReAct loop. Ingests untrusted booking confirmations, normalises to UTC, detects scheduling conflicts, resolves ambiguities via dialogue, and defends against prompt injection (CWE-1426). Never makes real-world bookings.</p>
-        <ul class="pc-metrics">
-          <li>🛡 Prompt injection sandboxing (CWE-1426)</li>
-          <li>✅ 14/14 Agent Arena benchmark cases passed</li>
-          <li>🔁 Self-healing error recovery for malformed tool output</li>
-        </ul>
+        <p>Autonomous travel assistant with a bounded 6-step ReAct loop. Ingests untrusted booking confirmations, detects scheduling conflicts, resolves ambiguities via dialogue, and defends against prompt injection — never makes real-world bookings.</p>
         <div class="pc-stack"><span>FastAPI</span><span>LangChain</span><span>Groq</span><span>Pydantic v2</span><span>ReAct</span></div>
         <div class="pc-links">
           <a href="https://github.com/Areeba444/agent-arena-travel" target="_blank" class="pc-link">GitHub →</a>
