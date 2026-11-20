@@ -43,11 +43,11 @@ document.querySelectorAll('.mob-link').forEach(link => {
 
 // ===== TYPING EFFECT =====
 const roles = [
-  "Full Stack Developer",
-  "Automation Builder",
-  "CS Student @ FAST",
-  "Social Work Minor",
-  "Problem Solver"
+  "Agentic AI Engineer",
+  "LangGraph Developer",
+  "Multi-Agent Systems",
+  "RAG & Eval Builder",
+  "CS @ FAST NUCES"
 ];
 let roleIndex = 0;
 let charIndex = 0;
@@ -113,3 +113,4 @@ const sectionObserver = new IntersectionObserver((entries) => {
 }, { threshold: 0.4 });
 
 sections.forEach(s => sectionObserver.observe(s));
+
